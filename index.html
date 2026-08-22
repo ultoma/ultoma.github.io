@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>차세대 옴니모달 에이전트를 위한 초장기 계층형 기억·추론 아키텍처</title>
+<meta name="description" content="경량·저전력AI 한계극복기술개발사업 연구과제(RS-2026-25524173). 서울대학교·포항공과대학교·㈜노타·㈜퓨리오사에이아이가 참여하는 초장기 옴니모달 에이전트 기반 기술 연구.">
+<meta property="og:title" content="차세대 옴니모달 에이전트를 위한 초장기 계층형 기억·추론 아키텍처">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<a class="skip" href="#main">본문 바로가기</a>
+
+<!-- ================= 헤더 (3개 페이지 모두 동일하게 유지) ================= -->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      초장기 계층형 기억·추론 아키텍처
+      <span>Ultra-Long-Term Omnimodal Agent</span>
+    </a>
+    <nav class="nav">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="people.html">People</a>
+      <a href="publications.html">Publications</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ================= 히어로 ================= -->
+  <section class="hero">
+    <div class="wrap">
+      <p class="label">경량·저전력AI 한계극복기술개발 · RS-2026-25524173</p>
+      <h1>10년 이상 축적된 사용자 경험을 기억하고, 웨어러블 기기 위에서 그 기억으로 추론하는 에이전트를 만듭니다.</h1>
+      <p class="lede">
+        비디오·오디오·텍스트·생체 신호를 실시간으로 이해하고, 시간이 흐르며 쌓이는 방대한 경험 정보를 계층적으로
+        압축·저장·회상하는 초장기 옴니모달 에이전트(Ultra-Long-Term Omni-Modal Agent)의 기반 기술을 개발합니다.
+        연구 결과물은 공개 SW와 벤치마크로 배포합니다.
+      </p>
+
+      <dl class="spec">
+        <div><dt>연구기간</dt><dd>2026.04 – 2030.12<br>(4년 9개월, 2단계)</dd></div>
+        <div><dt>지원</dt><dd>과학기술정보통신부<br>정보통신기획평가원</dd></div>
+        <div><dt>주관</dt><dd>서울대학교 산학협력단<br>연구책임자 송현오</dd></div>
+        <div><dt>참여</dt><dd>포항공과대학교, ㈜노타<br>㈜퓨리오사에이아이(협력)</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ================= 성과 진행 현황 (data.js 에서 자동 계산) ================= -->
+  <section class="section">
+    <div class="wrap">
+      <p class="label">Progress</p>
+      <h2>성과 진행 현황</h2>
+      <p style="margin-top:-12px;margin-bottom:26px">
+        아래 숫자는 Publications 페이지에 등록된 항목에서 자동으로 계산됩니다.
+        별도로 집계표를 관리할 필요가 없습니다.
+      </p>
+      <dl class="ledger" id="ledger-root"></dl>
+    </div>
+  </section>
+
+  <!-- ================= 연구 주제 ================= -->
+  <section class="section">
+    <div class="wrap">
+      <p class="label">Research Areas</p>
+      <h2>세 개의 축으로 연구를 진행합니다</h2>
+
+      <div class="topics">
+        <article class="topic">
+          <span class="tick" aria-hidden="true"></span>
+          <h3>초장기 기억 및 추론</h3>
+          <p>위치에 의존하지 않는 KV 캐시 모듈화로 과거 문맥을 재사용하고, 중요도와 재사용 빈도에 따라 기억을 계층적으로 저장·갱신합니다.</p>
+        </article>
+        <article class="topic">
+          <span class="tick" aria-hidden="true"></span>
+          <h3>차세대 모델 아키텍처</h3>
+          <p>트랜스포머와 상태공간모델을 결합한 Hybrid 구조, 그리고 입력 난이도에 따라 반복 횟수를 조절하는 Looped 트랜스포머를 설계합니다.</p>
+        </article>
+        <article class="topic">
+          <span class="tick" aria-hidden="true"></span>
+          <h3>옴니모달 에이전트 응용</h3>
+          <p>뇌 신호·심박 등 비주류 모달리티까지 이산 토큰으로 통합하고, 웨어러블 시나리오에 맞춘 Ego-Centric Assistant를 실증합니다.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 세미나 (항목이 없으면 자동으로 숨겨짐) ================= -->
+  <section class="section" id="seminar-section">
+    <div class="wrap">
+      <p class="label">Seminars</p>
+      <h2>세미나 및 통합 아키텍처 리뷰</h2>
+      <ul class="seminars" id="seminar-root"></ul>
+    </div>
+  </section>
+
+  <!-- ================= 최근 성과 ================= -->
+  <section class="section">
+    <div class="wrap">
+      <p class="label">Recent Output</p>
+      <h2>최근 성과</h2>
+      <div id="recent-root"></div>
+      <p style="margin-top:24px"><a href="publications.html">전체 성과 보기 →</a></p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= 푸터 (3개 페이지 모두 동일하게 유지) ================= -->
+<footer class="site-footer">
+  <div class="wrap">
+    <p>서울대학교 컴퓨터공학부 · <a href="mailto:hyunoh@snu.ac.kr">hyunoh@snu.ac.kr</a></p>
+    <!-- ▼ 사사문구는 협약서와 IITP 성과활용 지침의 문구로 반드시 확인 후 확정하세요 ▼ -->
+    <p>본 연구는 과학기술정보통신부 및 정보통신기획평가원의 경량·저전력AI 한계극복기술개발사업의 지원을 받아 수행되었습니다. (RS-2026-25524173)</p>
+  </div>
+</footer>
+
+<script src="assets/data.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>
