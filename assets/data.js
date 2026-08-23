@@ -4,7 +4,7 @@
    과제: 차세대 옴니모달 에이전트를 위한 초장기 계층형 기억·추론 아키텍처
    과제번호: RS-2026-25524173
 
-   - 사람이 늘면  PEOPLE 에 { } 블록 하나 추가
+   - 사람이 늘면  PEOPLE 에 { } 한 줄 추가
    - 성과가 나오면 OUTPUTS 에 { } 블록 하나 추가
 
    규칙 3가지만 지키면 됩니다.
@@ -29,216 +29,177 @@ window.TARGETS = {
 
 
 /* ------------------------------------------------------------------
-   2. 구성원 그룹 — 이 순서대로 People 페이지에 표시됩니다.
-      PEOPLE 의 group 값은 반드시 아래 목록 중 하나와 똑같이 적으세요.
+   2. 구성원 — People 페이지에 아래 순서대로 표시됩니다.
+
+      group : PEOPLE_GROUPS 중 하나
+      name  : 이름
+      desc  : 이름 옆에 붙는 소속·직위 (참여연구원은 생략)
+      lab   : 참여연구원만 사용. 같은 lab 끼리 한 줄에 이름이 나열됩니다.
+      url   : 있으면 이름에 링크가 걸립니다 (선택)
    ------------------------------------------------------------------ */
-window.PEOPLE_GROUPS = [
-  "초장기 기억 및 추론",
-  "차세대 모델 아키텍처",
-  "옴니모달 에이전트 응용",
-  "참여기업"
-];
+window.PEOPLE_GROUPS = ["연구책임자", "공동연구자", "참여연구원", "참여기업"];
 
-
-/* ------------------------------------------------------------------
-   3. 구성원
-
-      photo: images 폴더에 넣은 사진 경로. 없으면 "" 로 두면
-             이름 첫 글자가 대신 표시됩니다 (깨진 이미지 안 뜸).
-
-      ※ 개인정보 주의
-        - 휴대전화 번호는 절대 넣지 마세요. 계획서에는 있지만 웹 게시용이 아닙니다.
-        - 참여연구원 41명(박사 27, 석사 10 등)의 이름·사진·이메일을 올리려면
-          본인 동의를 먼저 받으세요. 동의 없이는 교수진과 기관만 게시하는 게 안전합니다.
-        - 아래 이메일은 계획서에 기재된 기관 계정만 넣어두었습니다.
-   ------------------------------------------------------------------ */
 window.PEOPLE = [
-  {
-    group: "초장기 기억 및 추론",
-    name: "송현오",
-    nameEn: "Hyun Oh Song",
-    role: "연구책임자 · 부교수",
-    affiliation: "서울대학교 컴퓨터공학부 · 머신러닝 연구실",
-    interest: "알고리즘 · 인공지능 경량화 및 맥락 압축",
-    photo: "",
-    email: "hyunoh@snu.ac.kr",
-    homepage: "",
-    scholar: ""
-  },
-  {
-    group: "초장기 기억 및 추론",
-    name: "심재웅",
-    nameEn: "Jaewoong Sim",
-    role: "부교수",
-    affiliation: "서울대학교 전기정보공학부 · 컴퓨터 구조 및 시스템 연구실",
-    interest: "시스템 · 인공지능 추론 시스템 최적화",
-    photo: "",
-    email: "",
-    homepage: "",
-    scholar: ""
-  },
-  {
-    group: "차세대 모델 아키텍처",
-    name: "이재욱",
-    nameEn: "Jaewook Lee",
-    role: "교수",
-    affiliation: "서울대학교 컴퓨터공학부 · 아키텍처 및 코드 최적화 연구실",
-    interest: "시스템 · 모델 아키텍처 특이적 HW/SW 최적화",
-    photo: "",
-    email: "",
-    homepage: "",
-    scholar: ""
-  },
-  {
-    group: "차세대 모델 아키텍처",
-    name: "모상우",
-    nameEn: "Sangwoo Mo",
-    role: "조교수",
-    affiliation: "포항공과대학교 산업경영공학과 · 멀티모달 통합지능 연구실",
-    interest: "알고리즘 · 계층적 문맥 병합, SSM",
-    photo: "",
-    email: "sangwoo.mo@postech.ac.kr",
-    homepage: "",
-    scholar: ""
-  },
-  {
-    group: "옴니모달 에이전트 응용",
-    name: "김건희",
-    nameEn: "Gunhee Kim",
-    role: "교수",
-    affiliation: "서울대학교 컴퓨터공학부 · 시각 및 학습 연구실",
-    interest: "알고리즘 · 옴니모달 인공지능",
-    photo: "",
-    email: "",
-    homepage: "",
-    scholar: ""
-  },
-  {
-    group: "참여기업",
-    name: "㈜노타",
-    nameEn: "Nota AI",
-    role: "공동연구개발기관",
-    affiliation: "AI 모델 최적화·경량화 플랫폼 NetsPresso, 비전-언어 모델 NVA",
-    interest: "옴니모달 에이전트 응용 · 시스템",
-    photo: "",
-    email: "",
-    homepage: "https://www.nota.ai/",
-    scholar: ""
-  },
-  {
-    group: "참여기업",
-    name: "㈜퓨리오사에이아이",
-    nameEn: "FuriosaAI",
-    role: "협력기관",
-    affiliation: "데이터센터 AI 추론 가속기 RNGD NPU 및 Furiosa SDK",
-    interest: "NPU 실증 및 상용 레퍼런스 확보",
-    photo: "",
-    email: "",
-    homepage: "https://furiosa.ai/",
-    scholar: ""
-  }
+  { group: "연구책임자", name: "송현오", desc: "서울대학교 컴퓨터공학부 부교수" },
+
+  { group: "공동연구자", name: "김건희", desc: "서울대학교 컴퓨터공학부 교수" },
+  { group: "공동연구자", name: "이재욱", desc: "서울대학교 컴퓨터공학부 교수" },
+  { group: "공동연구자", name: "심재웅", desc: "서울대학교 전기정보공학부 부교수" },
+  { group: "공동연구자", name: "모상우", desc: "포항공과대학교 산업경영공학과 조교수" },
+
+  { group: "참여연구원", lab: "서울대학교 머신러닝 연구실 (송현오)", name: "문승용" },
+  { group: "참여연구원", lab: "서울대학교 머신러닝 연구실 (송현오)", name: "이덕재" },
+  { group: "참여연구원", lab: "서울대학교 머신러닝 연구실 (송현오)", name: "김진욱" },
+  { group: "참여연구원", lab: "서울대학교 머신러닝 연구실 (송현오)", name: "김영인" },
+  { group: "참여연구원", lab: "서울대학교 머신러닝 연구실 (송현오)", name: "염준영" },
+  { group: "참여연구원", lab: "서울대학교 머신러닝 연구실 (송현오)", name: "추시훈" },
+
+  { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "송석원" },
+  { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "안재우" },
+  { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "정진서" },
+  { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "구준서" },
+  { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "문지환" },
+  { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "박건희" },
+  { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "이태현" },
+  { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "오예림" },
+  { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "박은규" },
+  { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "우승윤" },
+  { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "김현수" },
+  { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "김준서" },
+  { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "최세연" },
+  { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "남윤지" },
+  { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "박민수" },
+  { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "김소현" },
+
+  { group: "참여연구원", lab: "서울대학교 아키텍처 및 코드 최적화 연구실 (이재욱)", name: "이승렬" },
+  { group: "참여연구원", lab: "서울대학교 아키텍처 및 코드 최적화 연구실 (이재욱)", name: "박리해" },
+  { group: "참여연구원", lab: "서울대학교 아키텍처 및 코드 최적화 연구실 (이재욱)", name: "권상우" },
+  { group: "참여연구원", lab: "서울대학교 아키텍처 및 코드 최적화 연구실 (이재욱)", name: "임근수" },
+
+  { group: "참여연구원", lab: "서울대학교 컴퓨터 구조 및 시스템 연구실 (심재웅)", name: "이준서" },
+  { group: "참여연구원", lab: "서울대학교 컴퓨터 구조 및 시스템 연구실 (심재웅)", name: "최관석" },
+  { group: "참여연구원", lab: "서울대학교 컴퓨터 구조 및 시스템 연구실 (심재웅)", name: "이준기" },
+  { group: "참여연구원", lab: "서울대학교 컴퓨터 구조 및 시스템 연구실 (심재웅)", name: "이원범" },
+  { group: "참여연구원", lab: "서울대학교 컴퓨터 구조 및 시스템 연구실 (심재웅)", name: "조재훈" },
+  { group: "참여연구원", lab: "서울대학교 컴퓨터 구조 및 시스템 연구실 (심재웅)", name: "이석원" },
+  { group: "참여연구원", lab: "서울대학교 컴퓨터 구조 및 시스템 연구실 (심재웅)", name: "박준용" },
+  { group: "참여연구원", lab: "서울대학교 컴퓨터 구조 및 시스템 연구실 (심재웅)", name: "전상윤" },
+
+  { group: "참여연구원", lab: "포항공과대학교 멀티모달 통합지능 연구실 (모상우)", name: "김명수" },
+  { group: "참여연구원", lab: "포항공과대학교 멀티모달 통합지능 연구실 (모상우)", name: "조은찬" },
+  { group: "참여연구원", lab: "포항공과대학교 멀티모달 통합지능 연구실 (모상우)", name: "장승현" },
+  { group: "참여연구원", lab: "포항공과대학교 멀티모달 통합지능 연구실 (모상우)", name: "이수찬" },
+
+  { group: "참여연구원", lab: "㈜노타", name: "이요한" },
+  { group: "참여연구원", lab: "㈜노타", name: "신희명" },
+
+  { group: "참여기업", name: "㈜노타", desc: "공동연구개발기관", url: "https://www.nota.ai/" },
+  { group: "참여기업", name: "㈜퓨리오사에이아이", desc: "협력기관", url: "https://furiosa.ai/" }
 ];
 
 
 /* ------------------------------------------------------------------
-   4. 저자 강조
-      성과 목록의 저자 이름이 아래와 일치하면 굵게 표시됩니다.
-      참여연구원이 늘면 여기에 이름을 계속 추가하세요.
-   ------------------------------------------------------------------ */
-window.OUR_AUTHORS = [
-  "송현오", "Hyun Oh Song",
-  "심재웅", "Jaewoong Sim",
-  "이재욱", "Jaewook Lee",
-  "모상우", "Sangwoo Mo",
-  "김건희", "Gunhee Kim"
-];
+   3. 성과 (논문 · 공개SW · 특허)
 
+      ★ 등록 방법·양식·사사 문구: README.md
 
-/* ------------------------------------------------------------------
-   5. 성과 (논문 · 공개SW · 특허)
+      성과가 나오면 window.OUTPUTS = [ 바로 아래에 { } 블록 하나를 추가하세요.
+      연도 내림차순으로 자동 정렬되고, 같은 연도 안에서는 적은 순서대로 보입니다.
 
-      type   : "논문" | "공개SW" | "특허"   ← 필터 버튼이 이 값으로 만들어집니다
-      top10  : 논문일 때만 사용. CS 분야 국제 탑 컨퍼런스(research.com
-               'Best Computer Science Conferences' 상위 10%)에 해당하면 true.
-               ★ 이 값이 true 인 것만 90편 목표에 카운트됩니다.
-      status : 특허일 때만 사용. "출원" 또는 "등록"
-      note   : "Oral", "Spotlight", "SMART AAA" 등 부가 정보. 없으면 ""
-      links  : 없는 항목은 "" 로 두면 표시되지 않습니다.
+      type    : "논문" | "공개SW" | "특허"   ← Publications 페이지에서 이 순서로 섹션이 나뉩니다
+      lab     : 성과를 낸 연구실 (화면에는 안 나오고 연구실별 집계용)
+      title   : 제목
+      authors : 저자. 공개SW는 개발 기관, 특허는 출원인
+      venue   : 학회·저널 이름. 공개SW는 라이선스, 특허는 "국내" / "국제(PCT)" 등 (status 와 합쳐져 "국내 출원" 으로 표시)
+      year    : 연도 (숫자, 따옴표 없이)
+      note    : 제목 아래 굵게 붙는 한 줄. "Oral (77/21,575=0.35%)" 처럼. 없으면 ""
+      links   : { paper: "", code: "", bibtex: "", "project page": "", poster: "" }
+                키 이름이 그대로 링크 글자가 되고, 값이 비어 있으면 표시되지 않습니다.
+                필요한 키만 적어도 되고 새 키(supp, slides, talk video …)를 추가해도 됩니다.
+                bibtex 는 이 리포의 bibtex/ 폴더에 .txt 로 넣고 "bibtex/파일명.txt" 로 적으면 됩니다.
+      top10   : 논문만. CS 탑 컨퍼런스(research.com 상위 10%)면 true → Home 집계에 반영
+      status  : 특허만. "출원" | "등록" → "등록"만 Home 집계에 반영
 
-      ※ 아래 5건은 화면 형식을 보여주기 위한 예시입니다.
-        발표자료에 저자가 "Kim et al." 형태로만 적혀 있어 그대로 옮겼으니,
-        실제 게시 전에 전체 저자 목록으로 바꾸고 과제 성과로 교체하세요.
+      ── 복사해서 쓰는 양식 ──────────────────────────────────────────
+      {
+        type: "논문",
+        lab: "서울대학교 ○○ 연구실",
+        title: "",
+        authors: "",
+        venue: "",
+        year: 2026,
+        note: "",
+        links: { paper: "", code: "", bibtex: "" },
+        top10: true
+      },
+      ─────────────────────────────────────────────────────────────
    ------------------------------------------------------------------ */
 window.OUTPUTS = [
+  // 확정되면 아래 /* */ 를 풀어서 올리세요
+  /*
   {
-    year: 2025,
     type: "논문",
-    top10: true,
-    title: "KVzip: Query-Agnostic KV Cache Compression with Context Reconstruction",
-    authors: "Kim et al.",
-    venue: "NeurIPS 2025",
-    note: "Oral · Top 0.35%",
-    links: { pdf: "", arxiv: "", code: "https://github.com/snu-mllab/KVzip", doi: "" }
-  },
-  {
-    year: 2025,
-    type: "논문",
-    top10: true,
-    title: "Gaze Beyond the Frame: Forecasting Egocentric 3D Visual Span",
-    authors: "Yun et al.",
-    venue: "NeurIPS 2025",
-    note: "Spotlight · Top 3.19%",
-    links: { pdf: "", arxiv: "", code: "", doi: "" }
-  },
-  {
-    year: 2025,
-    type: "논문",
-    top10: false,
-    title: "Sparsified State-Space Models are Efficient Highway Networks",
-    authors: "Song et al.",
-    venue: "TMLR 2025",
-    note: "저널 · 탑 컨퍼런스 지표 미해당",
-    links: { pdf: "", arxiv: "", code: "", doi: "" }
-  },
-  {
-    year: 2025,
-    type: "공개SW",
-    title: "KVzip — 질의 비의존적 KV 캐시 압축 구현체",
-    authors: "머신러닝 연구실",
-    venue: "MIT License",
-    note: "",
-    links: { pdf: "", arxiv: "", code: "https://github.com/snu-mllab/KVzip", doi: "" }
-  },
-  {
+    lab: "서울대학교 머신러닝 연구실",
+    title: "Q-Strata: Hierarchical Bit Allocation for Mixed-Precision Quantization of Mixture-of-Experts LLMs",
+    authors: "Deokjae Lee, Sihun Chu, Hyun Oh Song",
+    venue: "Empirical Methods in Natural Language Processing (EMNLP)",
     year: 2026,
-    type: "특허",
-    status: "출원",
-    title: "위치 비의존적 KV 캐시 재사용 및 압축 방법과 그 장치",
-    authors: "서울대학교 산학협력단",
-    venue: "국내 출원",
-    note: "출원번호 입력 필요",
-    links: { pdf: "", arxiv: "", code: "", doi: "" }
-  }
+    note: "",
+    links: { paper: "", code: "", bibtex: "" },
+    top10: true
+  },
+  */
+  {
+    type: "논문",
+    lab: "서울대학교 머신러닝 연구실",
+    title: "Identifiable Token Correspondence for World Models",
+    authors: "Youngin Kim*, Ray Sun*, Inho Kim, Bumsoo Park, Hyun Oh Song",
+    venue: "International Conference on Machine Learning (ICML)",
+    year: 2026,
+    note: "",
+    links: {
+      paper: "https://arxiv.org/abs/2605.16457",
+      code: "https://github.com/snu-mllab/Identifiable-Token-Correspondence",
+      bibtex: "bibtex/Kim-ICML26_2.txt"
+    },
+    top10: true
+  },
+  {
+    type: "논문",
+    lab: "서울대학교 머신러닝 연구실",
+    title: "Rule2DRC: Benchmarking LLM Agents for DRC Script Synthesis with Execution-Guided Test Generation",
+    authors: "Jinuk Kim, Junsoo Byun, Donghwi Hwang, Seong-Jin Park, Hyun Oh Song",
+    venue: "International Conference on Machine Learning (ICML)",
+    year: 2026,
+    note: "",
+    links: {
+      paper: "https://arxiv.org/abs/2605.15669",
+      code: "https://github.com/snu-mllab/Rule2DRC",
+      bibtex: "bibtex/Kim-ICML26_1.txt",
+      "project page": "https://jinukkim.me/blog/rule2drc/",
+      poster: "https://drive.google.com/file/d/16YmmpAfSr9LtAfeEjeWdTrLCzXWVpJdA/view"
+    },
+    top10: true
+  },
 ];
 
 
 /* ------------------------------------------------------------------
-   6. 세미나 · 연구팀 교류 기록
+   4. 회의 · 세미나 기록
       계획서의 "세미나 교류를 위한 홈페이지" 항목에 해당합니다.
-      월 1회 통합 아키텍처 리뷰 기록을 여기에 쌓으면 됩니다.
-      항목이 하나도 없으면 Home 의 세미나 블록은 자동으로 숨겨집니다.
+      전체회의, 연구실 간 세미나, 통합 아키텍처 리뷰 등을 한 줄씩 남기면 됩니다.
+      항목이 하나도 없으면 Home 의 블록은 자동으로 숨겨집니다.
+
+      date    : "YYYY-MM-DD" (최신순 정렬에 쓰임)
+      title   : 한 줄 제목
+      speaker : 발표자·주관. 없으면 ""
+      place   : 장소. 없으면 ""
    ------------------------------------------------------------------ */
 window.SEMINARS = [
   {
-    date: "2026-09-15",
-    title: "통합 아키텍처 리뷰 #1 — 위치 비의존적 KV 캐시 모듈화",
-    speaker: "머신러닝 연구실",
-    place: "서울대 해동첨단공학관 313호"
+    date: "2026-08-19",
+    title: "진행상황 및 마일스톤 공유",
+    speaker: "서울대학교 · 포항공과대학교 · ㈜노타 · ㈜퓨리오사에이아이",
+    place: ""   // 장소를 적으면 제목 아래에 표시됩니다
   },
-  {
-    date: "2026-10-20",
-    title: "통합 아키텍처 리뷰 #2 — SSM Hybrid 모델 설계 방향",
-    speaker: "멀티모달 통합지능 연구실 (POSTECH)",
-    place: "온라인"
-  }
 ];

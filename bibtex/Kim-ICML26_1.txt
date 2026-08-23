@@ -1,0 +1,9 @@
+@InProceedings{kim2026rule2drc,
+  title     = {{Rule2DRC: Benchmarking LLM Agents for DRC Script Synthesis with Execution-Guided Test Generation}},
+  author    = {Kim, Jinuk and Byun, Junsoo and Hwang, Donghwi and Park, Seong-Jin and Song, Hyun Oh},
+  booktitle = {Proceedings of the 43rd International Conference on Machine Learning},
+  year      = {2026},
+  volume    = {306},
+  series    = {Proceedings of Machine Learning Research},
+  publisher = {PMLR}
+}

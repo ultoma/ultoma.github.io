@@ -1,0 +1,19 @@
+# PR 이나 push 로 data.js / bibtex 가 바뀌면 문법과 필수 항목을 검사합니다.
+name: check data.js
+
+on:
+  pull_request:
+    paths: ["assets/data.js", "bibtex/**", "scripts/check-data.js"]
+  push:
+    branches: [main]
+    paths: ["assets/data.js", "bibtex/**", "scripts/check-data.js"]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node scripts/check-data.js

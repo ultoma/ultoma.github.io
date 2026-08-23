@@ -1,0 +1,6 @@
+@inproceedings{kim2026itc,
+      title={Identifiable Token Correspondence for World Models},
+      author={Youngin Kim and Ray Sun and Inho Kim and Bumsoo Park and Hyun Oh Song},
+      booktitle = {International Conference on Machine Learning (ICML)},
+      year={2026},
+}
