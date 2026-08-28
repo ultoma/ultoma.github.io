@@ -23,7 +23,7 @@
    ------------------------------------------------------------------ */
 window.TARGETS = {
   topPapers: 90,   // CS 분야 국제 탑 컨퍼런스 논문 (가중치 60%)
-  repos:     45,   // GitHub 저장소 수 (가중치 20%)
+  repos:     45,   // GitHub 저장소 수 (가중치 20%) — 공개SW 항목과 성과의 links.code 를 합쳐 셉니다 (중복 주소 제외)
   patents:   22    // 국내 특허 등록 4건 + 10건, 국제 등록 8건 → 등록 기준 합계
 };
 
@@ -33,26 +33,69 @@ window.TARGETS = {
 
       group : PEOPLE_GROUPS 중 하나
       name  : 이름
-      desc  : 이름 옆에 붙는 소속·직위 (참여연구원은 생략)
-      lab   : 참여연구원만 사용. 같은 lab 끼리 한 줄에 이름이 나열됩니다.
-      url   : 있으면 이름에 링크가 걸립니다 (선택)
+      desc  : 소속·직위. 교수진은 사진 오른쪽에 표시되고, 참여연구원은 생략합니다.
+      email : 교수진만. 기관 메일 주소 (사진 오른쪽 desc 아래에 링크로 표시). 없으면 생략
+      role  : 교수진만. 이 과제에서 맡은 부분. 지금은 비워 두었고, 값을 넣으면 desc 아래에 표시됩니다.
+      lab   : 참여연구원만 사용. 같은 lab 끼리 묶여 사진이 한 줄에 6명씩 나열됩니다.
+      url   : 있으면 이름(교수진은 "홈페이지" 링크)에 링크가 걸립니다 (선택)
+      photo : 사진 경로. 예 "images/people/hong-gildong.jpg"
+              → 비워 두거나 아예 안 적으면 images/people/placeholder.svg 가 대신 나옵니다.
+              세로로 긴 3:4 비율 사진이 가장 잘 맞습니다 (예 450x600). images/people/ 에 넣으세요.
    ------------------------------------------------------------------ */
 window.PEOPLE_GROUPS = ["연구책임자", "공동연구자", "참여연구원", "참여기업"];
 
 window.PEOPLE = [
-  { group: "연구책임자", name: "송현오", desc: "서울대학교 컴퓨터공학부 부교수" },
+  {
+    group: "연구책임자", name: "송현오",
+    desc:  "서울대학교 컴퓨터공학부 부교수",
+    email: "hyunoh@mllab.snu.ac.kr",
+    url:   "https://mllab.snu.ac.kr/hyunoh/",
+    photo: "images/people/hyun-oh-song.png"
+  },
 
-  { group: "공동연구자", name: "김건희", desc: "서울대학교 컴퓨터공학부 교수" },
-  { group: "공동연구자", name: "이재욱", desc: "서울대학교 컴퓨터공학부 교수" },
-  { group: "공동연구자", name: "심재웅", desc: "서울대학교 전기정보공학부 부교수" },
-  { group: "공동연구자", name: "모상우", desc: "포항공과대학교 산업경영공학과 조교수" },
+  // 공동연구자 — 화면에 이 순서대로 한 줄에 두 분씩 나옵니다
+  // email 과 photo 는 각 연구실 담당자가 채워 주세요. 비어 있으면 그 줄은 화면에 안 나옵니다.
+  {
+    group: "공동연구자", name: "이재욱",
+    desc:  "서울대학교 컴퓨터공학부 교수",
+    email: "",
+    url:   "https://arc.snu.ac.kr/people/jw/",
+    photo: ""
+  },
+  {
+    group: "공동연구자", name: "김건희",
+    desc:  "서울대학교 컴퓨터공학부 교수",
+    email: "",
+    url:   "https://vision.snu.ac.kr/gunhee/",
+    photo: ""
+  },
+  {
+    group: "공동연구자", name: "심재웅",
+    desc:  "서울대학교 전기정보공학부 부교수",
+    email: "",
+    url:   "https://jaewoong.org/",
+    photo: ""
+  },
+  {
+    group: "공동연구자", name: "모상우",
+    desc:  "포항공과대학교 산업경영공학과 조교수",
+    email: "",
+    url:   "https://sites.google.com/view/sangwoomo",
+    photo: ""
+  },
 
-  { group: "참여연구원", lab: "서울대학교 머신러닝 연구실 (송현오)", name: "문승용" },
-  { group: "참여연구원", lab: "서울대학교 머신러닝 연구실 (송현오)", name: "이덕재" },
-  { group: "참여연구원", lab: "서울대학교 머신러닝 연구실 (송현오)", name: "김진욱" },
-  { group: "참여연구원", lab: "서울대학교 머신러닝 연구실 (송현오)", name: "김영인" },
-  { group: "참여연구원", lab: "서울대학교 머신러닝 연구실 (송현오)", name: "염준영" },
-  { group: "참여연구원", lab: "서울대학교 머신러닝 연구실 (송현오)", name: "추시훈" },
+  // 참여연구원 — 연구실 순서는 위 교수진 순서(송현오 → 이재욱 → 김건희 → 심재웅 → 모상우)와 맞춥니다
+  { group: "참여연구원", lab: "서울대학교 머신러닝 연구실 (송현오)", name: "문승용", photo: "images/people/seungyong-moon.jpg" },
+  { group: "참여연구원", lab: "서울대학교 머신러닝 연구실 (송현오)", name: "이덕재", photo: "images/people/deokjae-lee.jpg" },
+  { group: "참여연구원", lab: "서울대학교 머신러닝 연구실 (송현오)", name: "김진욱", photo: "images/people/jinuk-kim.jpg" },
+  { group: "참여연구원", lab: "서울대학교 머신러닝 연구실 (송현오)", name: "김영인", photo: "images/people/youngin-kim.jpg" },
+  { group: "참여연구원", lab: "서울대학교 머신러닝 연구실 (송현오)", name: "염준영", photo: "images/people/junyoung-yeom.jpg" },
+  { group: "참여연구원", lab: "서울대학교 머신러닝 연구실 (송현오)", name: "추시훈", photo: "images/people/sihun-chu.jpg" },
+
+  { group: "참여연구원", lab: "서울대학교 아키텍처 및 코드 최적화 연구실 (이재욱)", name: "이승렬" },
+  { group: "참여연구원", lab: "서울대학교 아키텍처 및 코드 최적화 연구실 (이재욱)", name: "박리해" },
+  { group: "참여연구원", lab: "서울대학교 아키텍처 및 코드 최적화 연구실 (이재욱)", name: "권상우" },
+  { group: "참여연구원", lab: "서울대학교 아키텍처 및 코드 최적화 연구실 (이재욱)", name: "임근수" },
 
   { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "송석원" },
   { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "안재우" },
@@ -70,11 +113,6 @@ window.PEOPLE = [
   { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "김소현" },
   { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "박은규" },
   { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "우승윤" },
-
-  { group: "참여연구원", lab: "서울대학교 아키텍처 및 코드 최적화 연구실 (이재욱)", name: "이승렬" },
-  { group: "참여연구원", lab: "서울대학교 아키텍처 및 코드 최적화 연구실 (이재욱)", name: "박리해" },
-  { group: "참여연구원", lab: "서울대학교 아키텍처 및 코드 최적화 연구실 (이재욱)", name: "권상우" },
-  { group: "참여연구원", lab: "서울대학교 아키텍처 및 코드 최적화 연구실 (이재욱)", name: "임근수" },
 
   { group: "참여연구원", lab: "서울대학교 컴퓨터 구조 및 시스템 연구실 (심재웅)", name: "이준서" },
   { group: "참여연구원", lab: "서울대학교 컴퓨터 구조 및 시스템 연구실 (심재웅)", name: "최관석" },
@@ -113,8 +151,14 @@ window.PEOPLE = [
       venue   : 학회·저널 이름. 공개SW는 라이선스, 특허는 "국내" / "국제(PCT)" 등 (status 와 합쳐져 "국내 출원" 으로 표시)
       year    : 연도 (숫자, 따옴표 없이)
       note    : 제목 아래 굵게 붙는 한 줄. "Oral (77/21,575=0.35%)" 처럼. 없으면 ""
+      image   : 왼쪽에 놓이는 대표 이미지 경로. 예 "images/publications/kim26icml_2.png"
+                → 비워 두거나 안 적으면 images/publications/placeholder.svg 가 대신 나옵니다.
+                가로로 긴 그림(논문 1페이지 대표 그림)이 잘 맞습니다. images/publications/ 에 넣으세요.
       links   : { paper: "", code: "", bibtex: "", "project page": "", poster: "" }
-                키 이름이 그대로 링크 글자가 되고, 값이 비어 있으면 표시되지 않습니다.
+                키 이름이 그대로 링크 글자가 됩니다.
+                → 값이 비어 있으면 회색 글자로 자리만 표시되고, 눌러도 이동하지 않습니다 (준비 중 표시).
+                  링크가 아직 정리 중이면 빈 값("")인 채로 먼저 올리고, 주소가 나오면 따옴표 안만 채우면 됩니다.
+                  자리 표시도 원하지 않으면 그 키를 아예 지우세요.
                 필요한 키만 적어도 되고 새 키(supp, slides, talk video …)를 추가해도 됩니다.
                 bibtex 는 이 리포의 bibtex/ 폴더에 .txt 로 넣고 "bibtex/파일명.txt" 로 적으면 됩니다.
       top10   : 논문만. CS 탑 컨퍼런스(research.com 상위 10%)면 true → Home 집계에 반영
@@ -129,14 +173,13 @@ window.PEOPLE = [
         venue: "",
         year: 2026,
         note: "",
+        image: "",
         links: { paper: "", code: "", bibtex: "" },
         top10: true
       },
       ─────────────────────────────────────────────────────────────
    ------------------------------------------------------------------ */
 window.OUTPUTS = [
-  // 확정되면 아래 /* */ 를 풀어서 올리세요
-  /*
   {
     type: "논문",
     lab: "서울대학교 머신러닝 연구실",
@@ -145,14 +188,16 @@ window.OUTPUTS = [
     venue: "Empirical Methods in Natural Language Processing (EMNLP)",
     year: 2026,
     note: "",
+    image: "",                                          // 대표 이미지 준비 중 → placeholder 표시
+    // paper / code / bibtex 정리 중 — 회색으로 자리만 표시됩니다. 주소가 나오면 따옴표 안만 채우면 됩니다
     links: { paper: "", code: "", bibtex: "" },
     top10: true
   },
-  */
   {
     type: "논문",
     lab: "서울대학교 머신러닝 연구실",
     title: "Identifiable Token Correspondence for World Models",
+    image: "images/publications/kim26icml_2.png",
     authors: "Youngin Kim*, Ray Sun*, Inho Kim, Bumsoo Park, Hyun Oh Song",
     venue: "International Conference on Machine Learning (ICML)",
     year: 2026,
@@ -168,6 +213,7 @@ window.OUTPUTS = [
     type: "논문",
     lab: "서울대학교 머신러닝 연구실",
     title: "Rule2DRC: Benchmarking LLM Agents for DRC Script Synthesis with Execution-Guided Test Generation",
+    image: "images/publications/kim26icml_1_light.png",
     authors: "Jinuk Kim, Junsoo Byun, Donghwi Hwang, Seong-Jin Park, Hyun Oh Song",
     venue: "International Conference on Machine Learning (ICML)",
     year: 2026,

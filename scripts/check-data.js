@@ -32,6 +32,7 @@ var groups = window.PEOPLE_GROUPS || [];
   if (o.type === "논문" && typeof o.top10 !== "boolean") errors.push(where + ": 논문은 top10 을 true 또는 false 로 적어야 합니다");
   if (o.type === "특허" && ["출원", "등록"].indexOf(o.status) === -1) errors.push(where + ": 특허는 status 를 \"출원\" 또는 \"등록\" 으로 적어야 합니다");
   if (o.type === "공개SW" && !(o.links && o.links.code)) errors.push(where + ": 공개SW 는 links.code 에 저장소 주소가 있어야 합니다");
+  if (o.image && !fs.existsSync(path.join(ROOT, o.image))) errors.push(where + ": image 파일이 없습니다 (" + o.image + ")");
   Object.keys(o.links || {}).forEach(function (k) {
     var v = o.links[k];
     if (v && !/^https?:\/\//.test(v) && !fs.existsSync(path.join(ROOT, v))) {
@@ -44,6 +45,7 @@ var groups = window.PEOPLE_GROUPS || [];
   var where = "PEOPLE[" + i + "] \"" + (p.name || "(이름 없음)") + "\"";
   if (!p.name) errors.push(where + ": name 이 비어 있습니다");
   if (groups.indexOf(p.group) === -1) errors.push(where + ": group 은 PEOPLE_GROUPS 중 하나여야 합니다 (현재: " + JSON.stringify(p.group) + ")");
+  if (p.photo && !fs.existsSync(path.join(ROOT, p.photo))) errors.push(where + ": photo 파일이 없습니다 (" + p.photo + ") — 비워 두면 placeholder 가 대신 나옵니다");
 });
 
 if (errors.length) {

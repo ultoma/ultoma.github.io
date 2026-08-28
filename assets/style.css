@@ -101,13 +101,49 @@ img { max-width: 100%; display: block; }
 .kv.wide dd { color: var(--ink); }
 .kv .sub { color: var(--ink-3); font-size: 0.88rem; }
 
+/* ---------- 사람 (People) ---------- */
+.portrait {                        /* 사진 공통 — 세로 3:4 로 잘라 맞춥니다 */
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  background: #F1F3F5;
+  border: 1px solid var(--rule);
+}
+
+/* 교수진: 사진 왼쪽, 이름·직함·역할·홈페이지 오른쪽 */
+.faculty { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 32px; margin-top: 22px; }   /* 한 줄에 두 분씩 */
+.person { display: flex; gap: 22px; align-items: flex-start; }
+.person .portrait { flex: 0 0 160px; width: 160px; height: 213px; }   /* 교수진 사진 — 모두 같은 크기 */
+.person-body { min-width: 0; }
+.person-body h3 { margin: 0 0 3px; font-size: 1.02rem; font-weight: 600; letter-spacing: -0.02em; }
+.person-body p { margin: 0; font-size: 0.92rem; line-height: 1.6; color: var(--ink-2); }
+.person-body .role { margin-top: 7px; color: var(--ink); }
+.person-body .mail { margin-top: 8px; font-size: 0.9rem; }
+.person-body .home { margin-top: 2px; font-size: 0.88rem; }
+
+/* 참여연구원: 연구실별로 묶어 한 줄에 6명 — 사진은 교수진보다 작게 */
+.lab { margin-top: 26px; }
+.lab h3 { margin: 0 0 14px; font-size: 0.95rem; font-weight: 600; color: var(--ink-2); }
+.member-grid {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 20px 16px;
+}
+.member-grid li { text-align: center; }
+.portrait.small { width: 120px; height: 160px; max-width: 100%; margin-inline: auto; }   /* 참여연구원 사진 */
+.member-name { display: block; margin-top: 7px; font-size: 0.88rem; line-height: 1.4; }
+
 /* ---------- 성과 목록 ---------- */
 .pub-list { list-style: none; margin: 0; padding: 0; }
-.pub { padding: 18px 0; border-bottom: 1px solid var(--rule); }
+.pub { display: flex; align-items: center; gap: 22px; padding: 18px 0; border-bottom: 1px solid var(--rule); }
+.pub-image { flex: 0 0 200px; width: 200px; object-fit: contain; border: 1px solid var(--rule); background: #fff; }
+.pub-body { min-width: 0; }
 .pub h4 { margin: 0 0 4px; font-size: 1.02rem; font-weight: 600; line-height: 1.45; letter-spacing: -0.015em; }
 .pub p { margin: 0; font-size: 0.92rem; line-height: 1.7; color: var(--ink-2); }
 .pub strong { color: var(--ink); font-weight: 600; }
 .pub-links a { font-weight: 500; }
+.pub-links .pending {            /* 링크 준비 중 — 다른 링크와 같은 색, 눌러도 이동하지 않습니다 */
+  font-weight: 500; color: var(--accent); cursor: default;
+}
 
 /* ---------- 푸터 ---------- */
 .site-footer {
@@ -124,8 +160,16 @@ img { max-width: 100%; display: block; }
 .empty { border: 1px dashed var(--rule); padding: 24px; color: var(--ink-3); font-size: 0.92rem; margin-top: 12px; }
 
 /* ---------- 모바일 ---------- */
+@media (max-width: 980px) {
+  .faculty { grid-template-columns: 1fr; }          /* 좁은 화면에서는 한 분씩 */
+  .member-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
 @media (max-width: 640px) {
   .kv > div, .kv.wide > div { grid-template-columns: 1fr; gap: 2px; }
+  .member-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .pub { flex-direction: column; align-items: flex-start; gap: 14px; }
+  .pub-image { flex: none; width: 100%; max-width: 260px; }
   .nav { gap: 18px; }
   .site-header .wrap { min-height: 56px; padding-block: 10px; }
 }
