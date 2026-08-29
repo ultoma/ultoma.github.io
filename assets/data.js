@@ -72,9 +72,9 @@ window.PEOPLE = [
   {
     group: "공동연구자", name: "심재웅",
     desc:  "서울대학교 전기정보공학부 부교수",
-    email: "",
+    email: "jaewoong@snu.ac.kr",
     url:   "https://jaewoong.org/",
-    photo: ""
+    photo: "images/people/jaewoong-sim.jpg"
   },
   {
     group: "공동연구자", name: "모상우",
@@ -114,14 +114,14 @@ window.PEOPLE = [
   { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "박은규" },
   { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "우승윤" },
 
-  { group: "참여연구원", lab: "서울대학교 컴퓨터 구조 및 시스템 연구실 (심재웅)", name: "이준서" },
-  { group: "참여연구원", lab: "서울대학교 컴퓨터 구조 및 시스템 연구실 (심재웅)", name: "최관석" },
-  { group: "참여연구원", lab: "서울대학교 컴퓨터 구조 및 시스템 연구실 (심재웅)", name: "이준기" },
-  { group: "참여연구원", lab: "서울대학교 컴퓨터 구조 및 시스템 연구실 (심재웅)", name: "이원범" },
-  { group: "참여연구원", lab: "서울대학교 컴퓨터 구조 및 시스템 연구실 (심재웅)", name: "조재훈" },
-  { group: "참여연구원", lab: "서울대학교 컴퓨터 구조 및 시스템 연구실 (심재웅)", name: "이석원" },
-  { group: "참여연구원", lab: "서울대학교 컴퓨터 구조 및 시스템 연구실 (심재웅)", name: "박준용" },
-  { group: "참여연구원", lab: "서울대학교 컴퓨터 구조 및 시스템 연구실 (심재웅)", name: "전상윤" },
+  { group: "참여연구원", lab: "서울대학교 컴퓨터 구조 및 시스템 연구실 (심재웅)", name: "이준서", photo: "images/people/junseo-lee.jpg" },
+  { group: "참여연구원", lab: "서울대학교 컴퓨터 구조 및 시스템 연구실 (심재웅)", name: "최관석", photo: "images/people/kwanseok-choi.jpg" },
+  { group: "참여연구원", lab: "서울대학교 컴퓨터 구조 및 시스템 연구실 (심재웅)", name: "이준기", photo: "images/people/jungi-lee.jpg" },
+  { group: "참여연구원", lab: "서울대학교 컴퓨터 구조 및 시스템 연구실 (심재웅)", name: "이원범", photo: "images/people/wonbeom-lee.jpg" },
+  { group: "참여연구원", lab: "서울대학교 컴퓨터 구조 및 시스템 연구실 (심재웅)", name: "조재훈", photo: "images/people/jaehoon-cho.jpg" },
+  { group: "참여연구원", lab: "서울대학교 컴퓨터 구조 및 시스템 연구실 (심재웅)", name: "이석원", photo: "images/people/seokwon-lee.jpg" },
+  { group: "참여연구원", lab: "서울대학교 컴퓨터 구조 및 시스템 연구실 (심재웅)", name: "박준용", photo: "images/people/junyong-park.jpg" },
+  { group: "참여연구원", lab: "서울대학교 컴퓨터 구조 및 시스템 연구실 (심재웅)", name: "전상윤", photo: "images/people/sangyun-jeon.jpg" },
 
   { group: "참여연구원", lab: "포항공과대학교 멀티모달 통합지능 연구실 (모상우)", name: "김명수" },
   { group: "참여연구원", lab: "포항공과대학교 멀티모달 통합지능 연구실 (모상우)", name: "조은찬" },
