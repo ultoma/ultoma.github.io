@@ -1,0 +1,6 @@
+@inproceedings{kim2026duplexgen,
+  title={DuplexGen: Adaptive Synthesis of Human-AI Turn-Taking Dialogues},
+  author={Takyoung Kim and Kang-wook Kim and Sang Hoon Woo and Julia Hirschberg and Gunhee Kim and Dilek Hakkani-Tür},
+  booktitle={Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing},
+  year={2026}
+}

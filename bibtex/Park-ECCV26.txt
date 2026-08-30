@@ -1,0 +1,6 @@
+@article{park2026sigma,
+  title={SiGMA: Sign-Guided Merging and Adaptation for Multimodal Continual Instruction Tuning},
+  author={Park, Keonhee and Kim, Gunhee},
+  journal={arXiv preprint arXiv:2607.20511},
+  year={2026}
+}
