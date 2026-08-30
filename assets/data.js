@@ -79,9 +79,9 @@ window.PEOPLE = [
   {
     group: "공동연구자", name: "모상우",
     desc:  "포항공과대학교 산업경영공학과 조교수",
-    email: "",
+    email: "mosw7@postech.ac.kr",
     url:   "https://sites.google.com/view/sangwoomo",
-    photo: ""
+    photo: "images/people/sangwoo-mo.jpg"
   },
 
   // 참여연구원 — 연구실 순서는 위 교수진 순서(송현오 → 이재욱 → 김건희 → 심재웅 → 모상우)와 맞춥니다
@@ -123,10 +123,10 @@ window.PEOPLE = [
   { group: "참여연구원", lab: "서울대학교 컴퓨터 구조 및 시스템 연구실 (심재웅)", name: "박준용", photo: "images/people/junyong-park.jpg" },
   { group: "참여연구원", lab: "서울대학교 컴퓨터 구조 및 시스템 연구실 (심재웅)", name: "전상윤", photo: "images/people/sangyun-jeon.jpg" },
 
-  { group: "참여연구원", lab: "포항공과대학교 멀티모달 통합지능 연구실 (모상우)", name: "김명수" },
-  { group: "참여연구원", lab: "포항공과대학교 멀티모달 통합지능 연구실 (모상우)", name: "조은찬" },
-  { group: "참여연구원", lab: "포항공과대학교 멀티모달 통합지능 연구실 (모상우)", name: "장승현" },
-  { group: "참여연구원", lab: "포항공과대학교 멀티모달 통합지능 연구실 (모상우)", name: "이수찬" },
+  { group: "참여연구원", lab: "포항공과대학교 멀티모달 통합지능 연구실 (모상우)", name: "김명수", photo: "images/people/myeongsoo-kim.jpg" },
+  { group: "참여연구원", lab: "포항공과대학교 멀티모달 통합지능 연구실 (모상우)", name: "조은찬", photo: "images/people/eunchan-jo.jpg" },
+  { group: "참여연구원", lab: "포항공과대학교 멀티모달 통합지능 연구실 (모상우)", name: "장승현", photo: "images/people/seunghyun-jang.jpg" },
+  { group: "참여연구원", lab: "포항공과대학교 멀티모달 통합지능 연구실 (모상우)", name: "이수찬", photo: "images/people/suchan-lee.jpg" },
 
   { group: "참여연구원", lab: "㈜노타", name: "이요한" },
   { group: "참여연구원", lab: "㈜노타", name: "신휘명" },
@@ -180,6 +180,23 @@ window.PEOPLE = [
       ─────────────────────────────────────────────────────────────
    ------------------------------------------------------------------ */
 window.OUTPUTS = [
+  {
+    type: "논문",
+    lab: "포항공과대학교 멀티모달 통합지능 연구실",
+    title: "Bring My Cup! Personalizing Vision-Language-Action Models with Visual Attentive Prompting",
+    image: "images/publications/lee26icml_vap.png",
+    authors: "Sangoh Lee, Sangwoo Mo^, Wook-Shin Han^",
+    venue: "International Conference on Machine Learning (ICML)",
+    year: 2026,
+    note: "",
+    links: {
+      paper: "https://arxiv.org/abs/2512.20014",
+      code: "https://github.com/Leesangoh/VAP",
+      bibtex: "bibtex/Lee-ICML26_VAP.txt",
+      "project page": "https://vap-project.github.io/",
+    },
+    top10: true
+  },
   {
     type: "논문",
     lab: "서울대학교 머신러닝 연구실",
