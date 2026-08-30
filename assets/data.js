@@ -67,7 +67,7 @@ window.PEOPLE = [
     desc:  "서울대학교 컴퓨터공학부 교수",
     email: "",
     url:   "https://vision.snu.ac.kr/gunhee/",
-    photo: ""
+    photo: "images/people/gunhee-kim.png"
   },
   {
     group: "공동연구자", name: "심재웅",
@@ -97,22 +97,21 @@ window.PEOPLE = [
   { group: "참여연구원", lab: "서울대학교 아키텍처 및 코드 최적화 연구실 (이재욱)", name: "권상우" },
   { group: "참여연구원", lab: "서울대학교 아키텍처 및 코드 최적화 연구실 (이재욱)", name: "임근수" },
 
-  { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "송석원" },
-  { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "안재우" },
-  { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "정진서" },
-  { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "구준서" },
-  { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "김현수" },
-  { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "김준서" },
-  { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "최세연" },
-  { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "문지환" },
-  { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "박건희" },
-  { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "이태현" },
-  { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "오예림" },
-  { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "남윤지" },
-  { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "박민수" },
-  { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "김소현" },
-  { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "박은규" },
-  { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "우승윤" },
+  { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "송석원", photo: "images/people/seokwon-song.png" },
+  { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "안재우", photo: "images/people/jaewoo-an.png" },
+  { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "정진서", photo: "images/people/jinseo-jeong.jpg" },
+  { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "구준서", photo: "images/people/junseo-koo.jpg" },
+  { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "김현수", photo: "images/people/hyunsoo-kim.png" },
+  { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "김준서", photo: "images/people/junseo-kim.jpg" },
+  { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "최세연", photo: "images/people/seyeon-choi.png" },
+  { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "문지환", photo: "images/people/jihwan-moon.png" },
+  { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "박건희", photo: "images/people/keonhee-park.jpg" },
+  { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "이태현", photo: "images/people/taehyun-lee.png" },
+  { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "오예림", photo: "images/people/yerim-oh.png" },
+  { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "박민수", photo: "images/people/minsu-park.png" },
+  { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "김소현", photo: "images/people/sohyeon-kim.jpg" },
+  { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "박은규", photo: "images/people/eunkyu-park.jpg" },
+  { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "우승윤", photo: "images/people/seungyoon-woo.png" },
 
   { group: "참여연구원", lab: "서울대학교 컴퓨터 구조 및 시스템 연구실 (심재웅)", name: "이준서", photo: "images/people/junseo-lee.jpg" },
   { group: "참여연구원", lab: "서울대학교 컴퓨터 구조 및 시스템 연구실 (심재웅)", name: "최관석", photo: "images/people/kwanseok-choi.jpg" },
@@ -242,6 +241,75 @@ window.OUTPUTS = [
       "project page": "https://jinukkim.me/blog/rule2drc/",
       poster: "https://drive.google.com/file/d/16YmmpAfSr9LtAfeEjeWdTrLCzXWVpJdA/view"
     },
+    top10: true
+  },
+  {
+    type: "논문",
+    lab: "서울대학교 시각 및 학습 연구실",
+    title: "SiGMA: Sign-Guided Merging and Adaptation for Multimodal Continual Instruction Tuning",
+    authors: "Keonhee Park, Gunhee Kim",
+    venue: "European Conference on Computer Vision (ECCV)",
+    year: 2026,
+    note: "",
+    image: "images/publications/park26eccv.png",
+    links: {
+      paper: "https://arxiv.org/pdf/2607.20511",
+      code: "https://github.com/pgh2874/SiGMA-Multimodal-Continaul-Instruction-Tuning",
+      bibtex: "bibtex/Park-ECCV26.txt"
+    },
+    top10: true
+  },
+  {
+    type: "논문",
+    lab: "서울대학교 시각 및 학습 연구실",
+    title: "REPAIR: Resolving Long-Tail Confusion in Scientific Retrievers via Fact-Verified Iterative Refinement",
+    authors: "Yerim Oh, Gunhee Kim",
+    venue: "Empirical Methods in Natural Language Processing (EMNLP)",
+    year: 2026,
+    note: "",
+    image: "",
+    // paper / code / bibtex 정리 중 — 회색으로 자리만 표시됩니다. 주소가 나오면 따옴표 안만 채우면 됩니다
+    links: { paper: "", code: "", bibtex: "" },
+    top10: true
+  },
+  {
+    type: "논문",
+    lab: "서울대학교 시각 및 학습 연구실",
+    title: "MULTI3IR: A Benchmark for Multi-perspective, Multi-domain, Multi-modal Information Retrieval",
+    authors: "Seokwon Song, Sohyeon Kim, Gunhee Kim",
+    venue: "Empirical Methods in Natural Language Processing (EMNLP)",
+    year: 2026,
+    note: "",
+    image: "",
+    links: { paper: "", code: "", bibtex: "" },
+    top10: true
+  },
+  {
+    type: "논문",
+    lab: "서울대학교 시각 및 학습 연구실",
+    title: "DuplexGen: Adaptive Synthesis of Human-AI Turn-Taking Dialogues",
+    authors: "Takyoung Kim, Kang-wook Kim, Sang Hoon Woo, Julia Hirschberg, Gunhee Kim, Dilek Hakkani-Tür",
+    venue: "Empirical Methods in Natural Language Processing (EMNLP)",
+    year: 2026,
+    note: "",
+    image: "images/publications/kim26emnlp_duplexgen.png",
+    links: {
+      paper: "https://arxiv.org/pdf/2607.26178",
+      code: "https://github.com/duplexgen/duplexgen-code",
+      bibtex: "bibtex/Kim-EMNLP26.txt"
+    },
+    top10: true
+  },
+  {
+    type: "논문",
+    lab: "서울대학교 시각 및 학습 연구실",
+    title: "STREAMALIGN: Streaming Text-Aligned Speech Tokenization",
+    authors: "Kang-wook Kim, Jinyoung Park, Jinsoo Kim, Sehun Lee, Tony Woo, Gunhee Kim",
+    venue: "Empirical Methods in Natural Language Processing (EMNLP)",
+    year: 2026,
+    note: "",
+    image: "",
+    links: { paper: "", code: "", bibtex: "" },
     top10: true
   },
 ];
