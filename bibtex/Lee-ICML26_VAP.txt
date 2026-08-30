@@ -1,0 +1,6 @@
+@article{lee2025bring,
+  title={Bring my cup! personalizing vision-language-action models with visual attentive prompting},
+  author={Lee, Sangoh and Mo, Sangwoo and Han, Wook-Shin},
+  journal={arXiv preprint arXiv:2512.20014},
+  year={2025}
+}
