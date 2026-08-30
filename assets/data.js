@@ -124,7 +124,7 @@ window.PEOPLE = [
   { group: "참여연구원", lab: "서울대학교 컴퓨터 구조 및 시스템 연구실 (심재웅)", name: "전상윤", photo: "images/people/sangyun-jeon.jpg" },
 
   { group: "참여연구원", lab: "포항공과대학교 멀티모달 통합지능 연구실 (모상우)", name: "김명수", photo: "images/people/myeongsoo-kim.jpg" },
-  { group: "참여연구원", lab: "포항공과대학교 멀티모달 통합지능 연구실 (모상우)", name: "조은찬", photo: "images/people/eunchan-cho.jpg" },
+  { group: "참여연구원", lab: "포항공과대학교 멀티모달 통합지능 연구실 (모상우)", name: "조은찬", photo: "images/people/eunchan-jo.jpg" },
   { group: "참여연구원", lab: "포항공과대학교 멀티모달 통합지능 연구실 (모상우)", name: "장승현", photo: "images/people/seunghyun-jang.jpg" },
   { group: "참여연구원", lab: "포항공과대학교 멀티모달 통합지능 연구실 (모상우)", name: "이수찬", photo: "images/people/suchan-lee.jpg" },
 
