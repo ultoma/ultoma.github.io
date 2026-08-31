@@ -60,7 +60,7 @@ window.PEOPLE = [
     desc:  "서울대학교 컴퓨터공학부 교수",
     email: "",
     url:   "https://arc.snu.ac.kr/people/jw/",
-    photo: ""
+    photo: "images/people/jaewook-lee.png"
   },
   {
     group: "공동연구자", name: "김건희",
@@ -92,10 +92,10 @@ window.PEOPLE = [
   { group: "참여연구원", lab: "서울대학교 머신러닝 연구실 (송현오)", name: "염준영", photo: "images/people/junyoung-yeom.jpg" },
   { group: "참여연구원", lab: "서울대학교 머신러닝 연구실 (송현오)", name: "추시훈", photo: "images/people/sihun-chu.jpg" },
 
-  { group: "참여연구원", lab: "서울대학교 아키텍처 및 코드 최적화 연구실 (이재욱)", name: "이승렬" },
-  { group: "참여연구원", lab: "서울대학교 아키텍처 및 코드 최적화 연구실 (이재욱)", name: "박리해" },
-  { group: "참여연구원", lab: "서울대학교 아키텍처 및 코드 최적화 연구실 (이재욱)", name: "권상우" },
-  { group: "참여연구원", lab: "서울대학교 아키텍처 및 코드 최적화 연구실 (이재욱)", name: "임근수" },
+  { group: "참여연구원", lab: "서울대학교 아키텍처 및 코드 최적화 연구실 (이재욱)", name: "이승렬", photo: "images/people/seungyul-lee.jpg" },
+  { group: "참여연구원", lab: "서울대학교 아키텍처 및 코드 최적화 연구실 (이재욱)", name: "박리해", photo: "images/people/rihae-park.jpg" },
+  { group: "참여연구원", lab: "서울대학교 아키텍처 및 코드 최적화 연구실 (이재욱)", name: "권상우", photo: "images/people/sangwoo-kwon.jpg" },
+  { group: "참여연구원", lab: "서울대학교 아키텍처 및 코드 최적화 연구실 (이재욱)", name: "임근수", photo: "images/people/keunsoo-lim.jpg" },
 
   { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "송석원", photo: "images/people/seokwon-song.png" },
   { group: "참여연구원", lab: "서울대학교 시각 및 학습 연구실 (김건희)", name: "안재우", photo: "images/people/jaewoo-an.png" },
