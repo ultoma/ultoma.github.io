@@ -141,7 +141,7 @@ window.PEOPLE = [
       ★ 등록 방법·양식·사사 문구: README.md
 
       성과가 나오면 window.OUTPUTS = [ 바로 아래에 { } 블록 하나를 추가하세요.
-      연도 내림차순으로 자동 정렬되고, 같은 연도 안에서는 적은 순서대로 보입니다.
+      날짜 내림차순으로 자동 정렬되고, 같은 날짜 안에서는 적은 순서대로 보입니다.
 
       type    : "논문" | "공개SW" | "특허"   ← Publications 페이지에서 이 순서로 섹션이 나뉩니다
       lab     : 성과를 낸 연구실 (화면에는 안 나오고 연구실별 집계용)
@@ -149,6 +149,7 @@ window.PEOPLE = [
       authors : 저자. 공개SW는 개발 기관, 특허는 출원인
       venue   : 학회·저널 이름. 공개SW는 라이선스, 특허는 "국내" / "국제(PCT)" 등 (status 와 합쳐져 "국내 출원" 으로 표시)
       year    : 연도 (숫자, 따옴표 없이)
+      date    : 정렬용 날짜 "YYYY-MM-DD". 없으면 year 로 정렬합니다 (화면에는 표시하지 않음)
       note    : 제목 아래 굵게 붙는 한 줄. "Oral (77/21,575=0.35%)" 처럼. 없으면 ""
       image   : 왼쪽에 놓이는 대표 이미지 경로. 예 "images/publications/kim26icml_2.png"
                 → 비워 두거나 안 적으면 images/publications/placeholder.svg 가 대신 나옵니다.
@@ -171,6 +172,7 @@ window.PEOPLE = [
         authors: "",
         venue: "",
         year: 2026,
+        date: "2026-01-01",
         note: "",
         image: "",
         links: { paper: "", code: "", bibtex: "" },
@@ -187,6 +189,7 @@ window.OUTPUTS = [
     authors: "Sangoh Lee, Sangwoo Mo^, Wook-Shin Han^",
     venue: "International Conference on Machine Learning (ICML)",
     year: 2026,
+    date: "2026-07-07",
     note: "",
     links: {
       paper: "https://arxiv.org/abs/2512.20014",
@@ -203,6 +206,7 @@ window.OUTPUTS = [
     authors: "Deokjae Lee, Sihun Chu, Hyun Oh Song",
     venue: "Empirical Methods in Natural Language Processing (EMNLP)",
     year: 2026,
+    date: "2026-10-24",
     note: "",
     image: "",                                          // 대표 이미지 준비 중 → placeholder 표시
     // paper / code / bibtex 정리 중 — 회색으로 자리만 표시됩니다. 주소가 나오면 따옴표 안만 채우면 됩니다
@@ -217,6 +221,7 @@ window.OUTPUTS = [
     authors: "Youngin Kim*, Ray Sun*, Inho Kim, Bumsoo Park, Hyun Oh Song",
     venue: "International Conference on Machine Learning (ICML)",
     year: 2026,
+    date: "2026-07-07",
     note: "",
     links: {
       paper: "https://arxiv.org/abs/2605.16457",
@@ -233,6 +238,7 @@ window.OUTPUTS = [
     authors: "Jinuk Kim, Junsoo Byun, Donghwi Hwang, Seong-Jin Park, Hyun Oh Song",
     venue: "International Conference on Machine Learning (ICML)",
     year: 2026,
+    date: "2026-07-07",
     note: "",
     links: {
       paper: "https://arxiv.org/abs/2605.15669",
@@ -250,6 +256,7 @@ window.OUTPUTS = [
     authors: "Keonhee Park, Gunhee Kim",
     venue: "European Conference on Computer Vision (ECCV)",
     year: 2026,
+    date: "2026-09-10",
     note: "",
     image: "images/publications/park26eccv.png",
     links: {
@@ -266,6 +273,7 @@ window.OUTPUTS = [
     authors: "Yerim Oh, Gunhee Kim",
     venue: "Empirical Methods in Natural Language Processing (EMNLP)",
     year: 2026,
+    date: "2026-10-24",
     note: "",
     image: "",
     // paper / code / bibtex 정리 중 — 회색으로 자리만 표시됩니다. 주소가 나오면 따옴표 안만 채우면 됩니다
@@ -279,6 +287,7 @@ window.OUTPUTS = [
     authors: "Seokwon Song, Sohyeon Kim, Gunhee Kim",
     venue: "Empirical Methods in Natural Language Processing (EMNLP)",
     year: 2026,
+    date: "2026-10-24",
     note: "",
     image: "",
     links: { paper: "", code: "", bibtex: "" },
@@ -291,6 +300,7 @@ window.OUTPUTS = [
     authors: "Takyoung Kim, Kang-wook Kim, Sang Hoon Woo, Julia Hirschberg, Gunhee Kim, Dilek Hakkani-Tür",
     venue: "Empirical Methods in Natural Language Processing (EMNLP)",
     year: 2026,
+    date: "2026-10-24",
     note: "",
     image: "images/publications/kim26emnlp_duplexgen.png",
     links: {
@@ -307,6 +317,7 @@ window.OUTPUTS = [
     authors: "Kang-wook Kim, Jinyoung Park, Jinsoo Kim, Sehun Lee, Tony Woo, Gunhee Kim",
     venue: "Empirical Methods in Natural Language Processing (EMNLP)",
     year: 2026,
+    date: "2026-10-24",
     note: "",
     image: "",
     links: { paper: "", code: "", bibtex: "" },

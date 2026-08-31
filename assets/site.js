@@ -129,7 +129,8 @@
   /* ================= 성과 목록 ================= */
   var TYPE_ORDER = ["논문", "공개SW", "특허"];
 
-  function byYearDesc(a, b) { return (b.year || 0) - (a.year || 0); }
+  function outputDate(o) { return has(o.date) ? String(o.date) : String(o.year || 0); }
+  function byDateDesc(a, b) { return outputDate(b).localeCompare(outputDate(a)); }
 
   function renderOutputs(root) {
     var types = TYPE_ORDER.slice();
@@ -139,7 +140,7 @@
 
     var html = "";
     types.forEach(function (t) {
-      var items = OUTPUTS.filter(function (o) { return o.type === t; }).sort(byYearDesc);
+      var items = OUTPUTS.filter(function (o) { return o.type === t; }).sort(byDateDesc);
       if (!items.length) return;
       html += '<section class="block">' +
                 '<h2>' + esc(t) + '</h2>' +
@@ -180,7 +181,7 @@
 
   /* ================= 최근 성과 (Home) ================= */
   function renderRecent(root, n) {
-    var items = OUTPUTS.slice().sort(byYearDesc).slice(0, n);
+    var items = OUTPUTS.slice().sort(byDateDesc).slice(0, n);
     if (!items.length) { root.innerHTML = ""; return; }
     root.innerHTML = '<ul class="pub-list">' + items.map(outputItem).join("") + '</ul>';
   }
