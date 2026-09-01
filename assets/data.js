@@ -186,7 +186,7 @@ window.OUTPUTS = [
     lab: "포항공과대학교 멀티모달 통합지능 연구실",
     title: "Bring My Cup! Personalizing Vision-Language-Action Models with Visual Attentive Prompting",
     image: "images/publications/lee26icml_vap.png",
-    authors: "Sangoh Lee, Sangwoo Mo^, Wook-Shin Han^",
+    authors: "Sangoh Lee, Sangwoo Mo†, Wook-Shin Han†",
     venue: "International Conference on Machine Learning (ICML)",
     year: 2026,
     date: "2026-07-07",
